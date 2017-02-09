@@ -1,0 +1,85 @@
+// Common styles of the project
+
+html,
+body {
+	font-family: "OpenSans";
+	&.active {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 1170px;
+	margin: auto;
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+	}
+}
+
+.title {
+	position: relative;
+
+	width: 100%;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #3a3a3a;
+
+	font-size: em(30px);
+	&:after {
+		right: 0;
+		bottom: -12px;
+		left: 0;
+
+		width: 140px;
+		height: 2px;
+		margin: auto;
+
+		background: #3a3a3a;
+
+		@include content;
+	}
+	@media screen and (max-width: 1024px) {
+		font-size: em(22px);
+	}
+}
+
+.btn-transparent {
+	display: block;
+
+	padding-right: 35px;
+	padding-left: 35px;
+
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: #fff;
+	border: 2px solid #fff;
+
+	font-family: "OpenSans-Semibold";
+	font-size: em(14px);
+	line-height: 43px;
+
+	@include transition;
+	&:hover {
+		color: #1bc5c4;
+		background: #fff;
+	}
+}
+
+.mask {
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 0;
+
+	display: none;
+
+	width: 100%;
+	height: 100%;
+	&.active {
+		display: block;
+	}
+}

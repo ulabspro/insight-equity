@@ -1,0 +1,32 @@
+.business-description {
+	padding-top: 56px;
+	padding-bottom: 74px;
+
+	background: #f0f0f0;
+	&__wrapper {
+		display: flex;
+
+		align-items: flex-start;
+		@extend .wrapper;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__title {
+		width: 100%;
+		margin-bottom: 64px;
+
+		@extend .title;
+	}
+	&__left,
+	&__right {
+		width: 49%;
+		p {
+			margin: 0;
+
+			color: #000;
+
+			font-size: em(14px);
+			line-height: em(19px, 14px);
+		}
+	}
+}

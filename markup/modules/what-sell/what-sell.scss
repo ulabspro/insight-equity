@@ -1,0 +1,76 @@
+.what-sell {
+	min-height: 472px;
+	padding-top: 56px;
+
+	background: url(%=staticPrefixForCss=%content/catalog-business-what.png) no-repeat center center;
+	background-size: cover;
+	&__wrapper {
+		display: flex;
+
+		align-items: center;
+		@extend .wrapper;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__title {
+		width: 100%;
+		margin-bottom: 69px;
+
+		color: #fff;
+
+		@extend .title;
+		&:after {
+			background: #fff;
+		}
+	}
+	&__left {
+		width: 450px;
+		margin-right: 100px;
+	}
+	&__right {
+		width: 450px;
+	}
+	&__item {
+		position: relative;
+		z-index: 1;
+
+		margin-bottom: 32px;
+		padding-left: 47px;
+
+		color: #fff;
+
+		font-size: em(16px);
+		line-height: em(19px);
+		span {
+			display: block;
+
+			padding-top: 5px;
+			padding-bottom: 5px;
+
+			text-transform: uppercase;
+
+			font-size: em(30px);
+		}
+		&:before {
+			z-index: -1;
+			left: 0;
+
+			@include bg($star-small);
+			@include content;
+		}
+		&--bigstar {
+			&:before {
+				top: -18px;
+				left: -20px;
+
+				@include bg($star-big);
+			}
+			span {
+				padding-top: 14px;
+				padding-bottom: 14px;
+
+				font-size: em(55px);
+			}
+		}
+	}
+}

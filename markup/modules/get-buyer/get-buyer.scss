@@ -1,0 +1,78 @@
+.get-buyer {
+	&__wrapper {
+		@extend .wrapper;
+	}
+	&__title {
+		position: relative;
+
+		height: 59px;
+		margin-bottom: 56px;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		color: #fff;
+		background-color: $blue;
+
+		font-size: em(30px);
+		line-height: 59px;
+		&:before,
+		&:after {
+			top: 0;
+
+			@include content;
+		}
+		&:before {
+			left: 0;
+
+			@include bg($get-buyer-title-left);
+		}
+		&:after {
+			right: 0;
+
+			@include bg($get-buyer-title-right);
+		}
+	}
+	&__row {
+		position: relative;
+
+		display: flex;
+
+		margin-bottom: 50px;
+
+		align-items: center;
+		justify-content: center;
+		&:before {
+			right: 0;
+			left: 0;
+
+			margin: auto;
+
+			@include bg($get-buyer-check);
+			@include content;
+		}
+	}
+	&__column {
+		box-sizing: border-box;
+		width: 50%;
+
+		color: #000;
+
+		font-size: em(20px);
+		strong {
+			text-transform: uppercase;
+
+			font-family: "OpenSans-Semibold";
+		}
+		&--left {
+			padding-right: 50px;
+
+			text-align: right;
+		}
+		&--right {
+			padding-left: 50px;
+
+			text-align: left;
+		}
+	}
+}

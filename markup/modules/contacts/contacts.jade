@@ -1,0 +1,12 @@
+mixin contacts(page)
+	section.contacts
+		.contacts__wrapper
+			.contacts__title контакты
+			.contacts__item Москва, улица Красная, дом 29, офис 3
+			.contacts__item +7 (495) 000–00–00
+			- if (page == 'main') {
+			.contacts__hide-map#hide-map Убрать карту
+			- }
+			- else {
+			.contacts__hide-map#hide-map Показать карту
+			- }

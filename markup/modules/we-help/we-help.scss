@@ -1,0 +1,60 @@
+.we-help {
+	@extend .receive;
+	&__wrapper {
+		@extend .receive__wrapper;
+	}
+	&__title {
+		@extend .receive__title;
+	}
+}
+
+.we-help-item {
+	margin-bottom: 40px;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	font-size: em(20px);
+	&:before {
+		position: relative;
+
+		display: block;
+
+		margin: 0 auto 18px;
+
+		content: "";
+	}
+	&--1 {
+		width: 235px;
+		&:before {
+			@include bg($we-help-1);
+		}
+	}
+	&--2 {
+		width: 300px;
+		margin-right: 150px;
+		margin-left: 134px;
+		&:before {
+			@include bg($we-help-2);
+		}
+	}
+	&--3 {
+		width: 230px;
+		&:before {
+			@include bg($we-help-3);
+		}
+	}
+	&--4 {
+		width: 320px;
+		margin-right: 105px;
+		&:before {
+			@include bg($we-help-4);
+		}
+	}
+	&--5 {
+		width: 285px;
+		&:before {
+			@include bg($we-help-5);
+		}
+	}
+}

@@ -1,0 +1,100 @@
+.security-technology {
+	padding-top: 56px;
+	padding-bottom: 75px;
+
+	background: url(%=staticPrefixForCss=%general/tabs.jpg) no-repeat;
+	background-size: cover;
+	&__wrapper {
+		@extend .wrapper;
+	}
+	&__title {
+		margin-bottom: 65px;
+
+		color: #fff;
+
+		@extend .title;
+		&:after {
+			background: #fff;
+		}
+		@media screen and (max-width: 960px) {
+			padding-top: 98px;
+
+			font-size: em(22px);
+		}
+	}
+}
+
+.security-technology-tabs {
+	width: 970px;
+	margin: auto;
+}
+
+.security-technology-tabs-control {
+	display: flex;
+
+	justify-content: space-between;
+	&__item {
+		box-sizing: border-box;
+		width: 33.1%;
+		height: 65px;
+
+		text-align: center;
+		text-align: center;
+		text-transform: uppercase;
+
+		color: #000;
+		background: rgba(255,255,255,.4);
+
+		font-size: em(14px);
+		line-height: 65px;
+		&:hover {
+			cursor: pointer;
+		}
+		&.active {
+			color: #fff;
+			background: rgba(0,0,0,.5);
+		}
+	}
+}
+
+.security-technology-tabs-content {
+	position: relative;
+	&__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		visibility: hidden;
+
+		padding-top: 65px;
+		padding-right: 174px;
+		padding-bottom: 45px;
+		padding-left: 270px;
+
+		opacity: 0;
+		color: #fff;
+		background: rgba(0,0,0,.5);
+
+		line-height: em(19px);
+
+		@include transition;
+		&:before {
+			@include content;
+		}
+		&.active {
+			position: relative;
+
+			visibility: visible;
+
+			opacity: 1;
+		}
+		&--1 {
+			&:before {
+				top: 55px;
+				left: 135px;
+
+				@include bg($tabs-1);
+			}
+		}
+	}
+}

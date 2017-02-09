@@ -1,0 +1,10 @@
+mixin header(page)
+	- if (page == undefined) page = ''
+	header.header(class="#{page}")
+		.header__wrapper
+			a(href="#" title="").header__logo
+			+top-menu()
+			.header__phone +7 (495) 000–00–00
+			.header__request-wrapper
+				a(href="#" title="").header__request заявка
+			

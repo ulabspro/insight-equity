@@ -1,0 +1,96 @@
+.header {
+	position: relative;
+	z-index: 1;
+	min-height: 85px;
+	// padding-top: 22px;
+
+	padding-bottom: 13px;
+
+	background: linear-gradient(top, #c7c7c7 0%, #f1f0f0 50%, #fff 100%);
+
+	@include transition;
+	&.main {
+		box-shadow: 0 5px 10px #ececec;
+	}
+	@media screen and (max-width: 1024px) {
+		min-height: auto;
+		padding: 0 30px;
+	}
+	&.active {
+		min-height: 120px;
+		@media screen and (max-width: 1024px) {
+			min-height: auto;
+		}
+	}
+	&__wrapper {
+		display: flex;
+
+		align-items: flex-start;
+		@extend .wrapper;
+		justify-content: space-between;
+		@media screen and (max-width: 1024px) {
+			height: 85px;
+		}
+	}
+	&__logo {
+		display: block;
+
+		margin-top: 21px;
+
+		@include bg($logo-desktop);
+		@media screen and (max-width: 1024px) {
+			@include bg($logo-mobile);
+			order: 3;
+		}
+		@media screen and (max-width: 960px) {
+			order: 2;
+		}
+	}
+	&__phone {
+		margin-top: 40px;
+
+		font-family: "OpenSans-Semibold";
+		font-size: em(14px);
+		line-height: 1;
+		@media screen and (max-width: 1024px) {
+			display: none;
+		}
+	}
+	&__request-wrapper {
+		@media screen and (max-width: 1024px) {
+			flex-grow: 2;
+			@include cf;
+			order: 2;
+		}
+		@media screen and (max-width: 960px) {
+			display: none;
+		}
+	}
+	&__request {
+		display: block;
+
+		width: 106px;
+		height: 45px;
+		margin-top: 24px;
+
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		color: #fff;
+		background: #008fbe;
+
+		font-size: em(14px);
+		line-height: 45px;
+
+		@include transition;
+		&:hover {
+			background: #008fbe + #111;
+		}
+		@media screen and (max-width: 1024px) {
+			float: right;
+
+			margin-right: 40px;
+		}
+	}
+}

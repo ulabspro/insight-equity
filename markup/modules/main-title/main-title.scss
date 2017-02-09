@@ -1,0 +1,48 @@
+.main-title {
+	position: relative;
+	z-index: 0;
+
+	padding-top: 63px;
+	padding-bottom: 63px;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #3a3a3a;
+	background: url(%=staticPrefixForCss=%general/top-bg.jpg) center center;
+	box-shadow: inset 0 -5px 10px #ececec;
+
+	font-weight: normal;
+	@media screen and (max-width: 960px) {
+		background: url(%=staticPrefixForCss=%general/top-bg-mobile.jpg) center center;
+	}
+	&__wrapper {
+		@extend .wrapper;
+		@media screen and (max-width: 960px) {
+			box-sizing: border-box;
+			padding: 0 15px;
+		}
+		@media screen and (max-width: 480px) {
+			box-sizing: border-box;
+			padding: 0 25px;
+		}
+	}
+	&__first {
+		font-family: "OpenSans-Bold";
+		font-size: em(45px);
+		line-height: 1;
+		@media screen and (max-width: 960px) {
+			font-size: em(40px);
+		}
+	}
+	&__second {
+		margin-top: 20px;
+
+		font-size: em(23px);
+		font-weight: normal;
+		line-height: 1;
+		@media screen and (max-width: 960px) {
+			font-size: em(20px);
+		}
+	}
+}

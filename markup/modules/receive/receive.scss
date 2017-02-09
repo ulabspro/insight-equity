@@ -1,0 +1,88 @@
+.receive {
+	padding-top: 50px;
+	padding-bottom: 45px;
+
+	background: url(%=staticPrefixForCss=%general/center-bg.jpg) center top;
+	background-repeat: repeat-x;
+	&__wrapper {
+		display: flex;
+
+		align-items: flex-start;
+		@extend .wrapper;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__title {
+		width: 950px;
+		margin-bottom: 69px;
+
+		@extend .title;
+	}
+}
+
+.receive-item {
+	position: relative;
+
+	box-sizing: border-box;
+	width: 365px;
+	margin-right: 36px;
+	margin-bottom: 42px;
+	padding-left: 115px;
+	&:nth-child(4),
+	&:nth-child(7),
+	&:last-child {
+		margin-right: 0;
+	}
+	&:before {
+		left: 0;
+
+		@include content;
+	}
+	&__title {
+		text-transform: uppercase;
+
+		font-size: em(20px);
+		line-height: em(25px, 20px);
+	}
+	&__text {
+		padding-top: 10px;
+
+		font-size: em(14px);
+		line-height: em(19px, 14px);
+	}
+	&--1 {
+		&:before {
+			@include bg($receive-1);
+		}
+	}
+	&--2 {
+		&:before {
+			@include bg($receive-2);
+		}
+	}
+	&--3 {
+		&:before {
+			@include bg($receive-3);
+		}
+	}
+	&--4 {
+		&:before {
+			@include bg($receive-4);
+		}
+	}
+	&--5 {
+		&:before {
+			@include bg($receive-5);
+		}
+	}
+	&--6 {
+		&:before {
+			@include bg($receive-6);
+		}
+	}
+	&--7 {
+		&:before {
+			@include bg($receive-7);
+		}
+	}
+}

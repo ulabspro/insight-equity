@@ -1,0 +1,32 @@
+.breadcrumbs {
+	padding-top: 25px;
+	padding-bottom: 24px;
+
+	letter-spacing: em(50, 1000);
+
+	font-size: em(14px);
+
+	@extend .wrapper;
+	&__item {
+		position: relative;
+
+		padding-right: 26px;
+
+		text-decoration: none;
+
+		color: $blue;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:after {
+			top: 6px;
+			right: 10px;
+
+			@include content;
+			@include bg($breadcrumbs-arrow);
+		}
+	}
+	&__current {
+		color: #8d8d8d;
+	}
+}

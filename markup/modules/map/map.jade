@@ -1,0 +1,5 @@
+mixin map(page)
+	- if (page == 'main') page = 'active'
+	- if (page == undefined) page = ''
+	section.map#map(class="#{page}")
+		| <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=IMSORWX7J-NfHUYKEltqsljW1gIIZMNj&width=6000&height=490"></script>

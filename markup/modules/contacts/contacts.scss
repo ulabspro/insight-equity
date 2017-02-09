@@ -1,0 +1,52 @@
+.contacts {
+	width: 100%;
+	height: 489px;
+
+	text-align: center;
+
+	background: url(%=staticPrefixForCss=%general/contacts-bg.jpg) no-repeat;
+	background-size: cover;
+	@media screen and (max-width: 960px) {
+		height: 335px;
+	}
+	&__wrapper {
+		@extend .wrapper;
+	}
+	&__title {
+		margin-bottom: 65px;
+		padding-top: 140px;
+
+		color: #fff;
+
+		@extend .title;
+		&:after {
+			background: #fff;
+		}
+		@media screen and (max-width: 960px) {
+			padding-top: 98px;
+
+			font-size: em(22px);
+		}
+	}
+	&__item {
+		margin-bottom: 20px;
+
+		color: #fff;
+
+		font-size: em(20px);
+		line-height: 1;
+	}
+	&__hide-map {
+		margin-top: 23px;
+
+		text-decoration: underline;
+
+		color: #fff;
+
+		font-size: em(20px);
+		&:hover {
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+}

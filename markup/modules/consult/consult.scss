@@ -1,0 +1,140 @@
+.consult {
+	padding-top: 64px;
+	padding-bottom: 70px;
+
+	background: url(%=staticPrefixForCss=%general/center-bg.jpg) center top;
+	background-repeat: repeat-x;
+	@media screen and (max-width: 1024px) {
+		padding-top: 50px;
+	}
+	&__wrapper {
+		display: flex;
+
+		align-items: flex-start;
+		@extend .wrapper;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media screen and (max-width: 1024px) {
+			justify-content: center;
+		}
+	}
+	&__title {
+		margin-bottom: -10px;
+
+		@extend .title;
+	}
+}
+
+.consult-item {
+	position: relative;
+
+	width: 295px;
+	margin-top: 65px;
+	@media screen and (max-width: 1024px) {
+		width: 275px;
+		margin: 65px 100px 0;
+	}
+	@media screen and (max-width: 960px) {
+		width: 80%;
+		margin: 65px auto 0;
+	}
+	&:hover {
+		cursor: default;
+		.consult-item__title {
+			text-decoration: none;
+
+			color: $blue;
+		}
+		&:after {
+			visibility: visible;
+
+			opacity: 1;
+		}
+	}
+	&:before {
+		position: relative;
+
+		display: block;
+
+		margin: 0 auto 50px;
+
+		content: "";
+	}
+	&:after {
+		top: -26px;
+		right: 0;
+		left: 0;
+
+		visibility: hidden;
+
+		margin: auto;
+
+		opacity: 0;
+
+		@include transition;
+		@include content;
+		@include bg($consult-icon-active);
+		@media screen and (max-width: 1024px) {
+			visibility: visible;
+
+			opacity: 1;
+		}
+	}
+	&--due-diligence {
+		&:before {
+			@include bg($consult-due-diligence);
+		}
+	}
+	&--strategic-development {
+		&:before {
+			@include bg($consult-strategic-development);
+		}
+	}
+	&--marketing {
+		&:before {
+			@include bg($consult-marketing);
+		}
+	}
+	&--sales {
+		&:before {
+			@include bg($consult-sales);
+		}
+		&:after {
+			top: -17px;
+		}
+	}
+	&--control-system {
+		&:before {
+			@include bg($consult-control-system);
+		}
+		&:after {
+			top: -22px;
+		}
+	}
+	&--support-transactions {
+		&:before {
+			@include bg($consult-support-transactions);
+		}
+		&:after {
+			top: -28px;
+		}
+	}
+	&__title {
+		margin-bottom: 20px;
+
+		text-align: center;
+		text-decoration: underline;
+		text-transform: uppercase;
+
+		color: #000;
+
+		font-size: em(20px);
+	}
+	&__text {
+		color: #000;
+
+		font-size: em(14px);
+		line-height: em(19px, 14px);
+	}
+}

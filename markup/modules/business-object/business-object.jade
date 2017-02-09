@@ -1,0 +1,27 @@
+mixin business-object()
+	.business-object
+		.business-object__wrapper
+
+			.business-object-gallery#business-object-gallery
+				- for (var i = 1; i < 3; i++) {
+				img(src="%=staticPrefix=%images/content/business-object-gallery-#{i}.jpg" alt="")
+				- }
+			.business-object-cart
+				.business-object-cart__place Великий Новгород
+				.business-object-cart__map 
+					| <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=IMSORWX7J-NfHUYKEltqsljW1gIIZMNj&width=418&height=223"></script>
+				
+				.business-object-cart-potencial
+					.business-object-cart-potencial-rating
+						.business-object-cart-potencial-rating__item.business-object-cart-potencial-rating__item--full
+						.business-object-cart-potencial-rating__item.business-object-cart-potencial-rating__item--full
+						.business-object-cart-potencial-rating__item.business-object-cart-potencial-rating__item--full
+						.business-object-cart-potencial-rating__item.business-object-cart-potencial-rating__item--full
+						.business-object-cart-potencial-rating__item
+
+					.business-object-cart-potencial__title Потенциал развития
+				
+				.business-object-cart-risk
+					.business-object-cart-risk__level.business-object-cart-risk__level--min
+
+					.business-object-cart-risk__title Уровень риска

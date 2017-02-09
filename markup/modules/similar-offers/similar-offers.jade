@@ -1,0 +1,15 @@
+mixin similar-offers()
+	.similar-offers
+		.similar-offers__wrapper
+			.similar-offers__title Похожие предложения
+			- for (var i = 0; i < 4; i++) {
+			.similar-offers-item
+				.similar-offers-item-content
+					.similar-offers-item-content__inside
+						.similar-offers-item__title Модный супер-отель бизнес-класса в самом центре Москвы
+					img(src="%=staticPrefix=%images/content/similar-offers.jpg" alt="").similar-offers-item__img
+				.similar-offers-item-characteristics
+					.similar-offers-item-characteristics__item.similar-offers-item-characteristics__item--place Великий Новгород
+					.similar-offers-item-characteristics__item.similar-offers-item-characteristics__item--ruble 500 000 прибыль
+					.similar-offers-item-characteristics__item.similar-offers-item-characteristics__item--ruble 200 000 000 стоимость
+			- }

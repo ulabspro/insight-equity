@@ -1,0 +1,89 @@
+.request-business {
+	min-height: 579px;
+	padding-top: 55px;
+
+	background: url(%=staticPrefixForCss=%general/request-business.jpg) no-repeat;
+	background-size: cover;
+	&__wrapper {
+		@extend .wrapper;
+	}
+	&__title {
+		color: #fff;
+
+		@extend .title;
+		&:after {
+			background: #fff;
+		}
+	}
+}
+
+.request-business-form {
+	width: 475px;
+	margin: 73px auto 0;
+	&__check {
+		color: #fff;
+		span {
+			padding-left: 10px;
+
+			font-size: em(14px);
+		}
+		a {
+			color: #fff;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__element {
+		box-sizing: border-box;
+		width: 100%;
+		height: 35px;
+		margin-bottom: 10px;
+		padding-left: 12px;
+
+		color: #fff;
+		border: 2px solid #c1c1c1;
+		background-color: transparent;
+
+		font-size: em(14px);
+
+		@include transition;
+		&--textarea {
+			height: 105px;
+			padding-top: 10px;
+		}
+		&:focus {
+			color: #000;
+			border-color: #fff;
+			outline: none;
+			background-color: #fff;
+		}
+	}
+	&__submit {
+		display: block;
+
+		width: 205px;
+		height: 43px;
+		margin-top: 15px;
+
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		color: #fff;
+		border: 0;
+		background: #008fbe;
+
+		font-size: em(14px);
+
+		@include transition;
+		&:hover {
+			background: #008fbe + #111;
+		}
+		@media screen and (max-width: 1024px) {
+			float: right;
+
+			margin-right: 40px;
+		}
+	}
+}

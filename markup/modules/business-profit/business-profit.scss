@@ -1,0 +1,52 @@
+.business-profit {
+	padding-top: 40px;
+	padding-bottom: 46px;
+
+	color: #fff;
+	background: linear-gradient(to bottom, #079cbf, #1bc5c4);
+	&__wrapper {
+		display: flex;
+
+		align-items: flex-start;
+		@extend .wrapper;
+		justify-content: center;
+	}
+	&__left,
+	&__right {
+		width: 440px;
+	}
+	&__left {
+		margin-right: 100px;
+
+		text-align: right;
+	}
+	&__right {
+		padding-top: 17px;
+	}
+	&__cost {
+		position: relative;
+
+		margin-bottom: 5px;
+		padding-right: 80px;
+
+		font-size: em(90px);
+		line-height: 1;
+		&:after {
+			top: 15px;
+			right: 0;
+
+			@include bg($ruble-big);
+			@include content;
+		}
+	}
+	&__text {
+		font-size: em(20px);
+		line-height: em(25px, 20px);
+	}
+	&__btn {
+		width: 130px;
+		margin-top: 29px;
+
+		@extend .btn-transparent;
+	}
+}

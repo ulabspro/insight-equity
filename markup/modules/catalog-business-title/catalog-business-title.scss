@@ -1,0 +1,20 @@
+.catalog-business-title {
+	text-transform: uppercase;
+
+	color: $blue;
+	&__wrapper {
+		@extend .wrapper;
+	}
+	h1 {
+		margin-bottom: 0;
+
+		font-size: em(55px);
+		font-weight: normal;
+	}
+	h2 {
+		margin-top: 0;
+
+		font-size: em(30px);
+		font-weight: normal;
+	}
+}

@@ -1,0 +1,137 @@
+.business-numbers {
+	padding-top: 56px;
+	padding-bottom: 75px;
+
+	background: linear-gradient(top, #008fbe 0%, #22d3c5 100%);
+	&__wrapper {
+		display: flex;
+
+		align-items: flex-start;
+		@extend .wrapper;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__title {
+		margin-bottom: 69px;
+
+		color: #fff;
+
+		@extend .title;
+		&:after {
+			background: #fff;
+		}
+	}
+}
+
+.business-numbers-item {
+	display: flex;
+
+	color: #fff;
+
+	justify-content: flex-start;
+	&--first {
+		width: 155px;
+	}
+	&--second {
+		width: 280px;
+		margin-right: 100px;
+		margin-left: 160px;
+	}
+	&--third {
+		width: 265px;
+	}
+	&__num {
+		margin-top: -17px;
+
+		font-size: em(130px);
+		line-height: 1;
+	}
+	&__up {
+		text-transform: uppercase;
+
+		font-family: "OpenSans-Semibold";
+		font-size: em(30px);
+		line-height: 1;
+	}
+	&__down {
+		margin-top: 10px;
+
+		font-size: em(16px);
+		line-height: em(19px);
+	}
+}
+
+.business-numbers-last-year {
+	display: flex;
+
+	margin-top: 50px;
+	padding-top: 40px;
+	padding-right: 93px;
+	padding-bottom: 70px;
+	padding-left: 93px;
+
+	color: #fff;
+	border: 3px solid #fff;
+
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__title {
+		width: 100%;
+		margin-bottom: 25px;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		font-size: em(20px);
+	}
+}
+
+.business-numbers-last-year-item {
+	position: relative;
+
+	padding-left: 61px;
+	&--first {
+		width: 324px;
+	}
+	&--second {
+		width: 235px;
+	}
+	&:before {
+		top: -10px;
+		left: 0;
+
+		@include content;
+		@include bg($check);
+	}
+	&__text {
+		strong {
+			text-transform: uppercase;
+
+			font-family: "OpenSans-Semibold";
+		}
+	}
+}
+
+.business-numbers-last-year-item-cost {
+	display: flex;
+
+	margin-top: 10px;
+
+	justify-content: flex-start;
+	&__left {
+		margin-top: -17px;
+
+		letter-spacing: em(50, 1000);
+
+		font-size: em(70px);
+	}
+	&__right {
+		text-transform: uppercase;
+
+		font-family: "OpenSans-Semibold";
+		font-size: em(25px);
+	}
+	&__down {
+		line-height: 1;
+	}
+}

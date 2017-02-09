@@ -1,0 +1,68 @@
+.credit {
+	padding-top: 56px;
+
+	@extend .receive;
+	&__wrapper {
+		@extend .wrapper;
+	}
+	&__title {
+		margin-bottom: 15px;
+
+		@extend .title;
+	}
+	&__item {
+		position: relative;
+
+		box-sizing: border-box;
+		width: 875px;
+		margin: auto;
+		padding-top: 34px;
+		padding-left: 135px;
+
+		font-size: em(20px);
+		&:before {
+			top: 10px;
+			left: 0;
+
+			@include content;
+			@include bg($credit);
+		}
+		strong {
+			font-family: "OpenSans-Semibold";
+		}
+	}
+}
+
+.credit-request {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	text-align: center;
+	&__title {
+		text-transform: uppercase;
+
+		font-size: em(20px);
+	}
+	&__btn {
+		display: block;
+
+		width: 291px;
+		height: 43px;
+		margin: 20px auto 0;
+
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		color: #fff;
+		background: #008fbe;
+
+		font-size: em(14px);
+		line-height: 43px;
+
+		@include transition;
+		&:hover {
+			background: #008fbe + #111;
+		}
+	}
+}

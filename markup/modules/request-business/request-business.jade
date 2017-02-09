@@ -1,0 +1,15 @@
+mixin request-business()
+	.request-business
+		.request-business__wrapper 
+			.request-business__title Заявка на подбор бизнеса
+
+			form(method="" action="").request-business-form
+				input(type="text" value="" placeholder="Имя и фамилия").request-business-form__element
+				input(type="text" value="" placeholder="Телефон").request-business-form__element
+				input(type="text" value="" placeholder="Электронная почта").request-business-form__element
+				textarea(placeholder="Комментарий").request-business-form__element.request-business-form__element--textarea
+				label.request-business-form__check
+					input(type="checkbox")
+					span Согласен с 
+						a(href="#" title="") обработкой персональных данных
+				input(type="submit" value="Оставить заявку").request-business-form__submit
